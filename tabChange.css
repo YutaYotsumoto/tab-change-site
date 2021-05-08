@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  font-size: larger;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: rgb(110, 255, 158);
+  padding: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs li {
+  width: 45%;
+}
+
+.tabs li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-top: solid 1px rgb(138, 138, 138);
+  border-left: solid 1px rgb(138, 138, 138);
+  border-right: solid 1px rgb(138, 138, 138);
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tabs li a:not(.active):hover {
+  opacity: 0.7;
+}
+/* aタグが　notactive押されていない所に hover */
+
+.tabs li a.active {
+  background-color: rgb(253, 255, 123);
+}
+/* タグ.active {} →　ボタンがactiveの場合 {}内の処理を行う */
+
+.contents li {
+  background-color: rgb(253, 255, 123);
+  padding: 20px;
+  margin-top: -16px;
+  display: none;
+  border: solid 1px rgb(138, 138, 138);
+}
+
+.contents li.active {
+  display: block;
+}
+
+/* 9~ a{}　→　aタグを呼び出し　＝アイテム、コーディネートボタン */
+/* 14~ mainタグを呼び出し　＝　アイテム、コーディネートボタン・アイテム、コーディネートコンテンツ */
+/* 22~ .tabsクラス{} */
+/* 27~　.tabsクラス　の　liタグ  {} */
+/* 31~　.tabsクラス　の liタグ　の aタグ　＝アイテム、コーディネートボタン */
+
+/* 51~　.contentsクラス　の　li　＝　アイテム、コーディネートコンテンツ */
+/* 51~　.contentsクラス　の　li　がアクティブの場合　display が block */
